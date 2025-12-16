@@ -4,6 +4,30 @@
   box-sizing: border-box;
 }
 
+body {
+  background: linear-gradient(
+    120deg,
+    #050505,
+    #0b0f14,
+    #020202
+  );
+  background-size: 400% 400%;
+  animation: bgMove 18s ease infinite;
+  color: #fff;
+}
+
+/* animasi pelan */
+@keyframes bgMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 body::before {
   content: "";
   position: fixed;
