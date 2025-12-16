@@ -98,9 +98,12 @@ body {
   text-align: center;
 }
 
-.discord-btn {
-  height: 20px;
-  width: 20px;
+/* FIX DISCORD ICON SIZE (FINAL) */
+.discord-btn img {
+  width: 18px !important;
+  height: 18px !important;
+  max-width: none !important;
+  max-height: none !important;
   object-fit: contain;
 }
   transition: all 0.3s ease;
