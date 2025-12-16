@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+  padding: 16px 24px;
+  border-bottom: 1px solid #222;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.logo {
+  height: 32px;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  color: #ccc;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* SECTION */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.card {
+  border: 1px solid #222;
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  border-color: #fff;
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* DISCORD */
+.discord {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.discord-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+  padding: 14px 24px;
+  background: #5865F2;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.discord-btn img {
+  height: 24px;
+}
+
+/* FOOTER */
+footer {
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #222;
+  color: #777;
+}
+
+/* ANIMATION */
+.fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+  }
