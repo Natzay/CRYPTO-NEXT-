@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>CryptoNext</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="brand">
+    <img src="assets/logo.png" class="logo">
+    <span>CryptoNext</span>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero fade">
+  <h1>CryptoNext</h1>
+  <p>
+    Platform pembelajaran crypto dari basic hingga advance.  
+    Belajar, pahami market, dan tingkatkan skill bersama komunitas.
+  </p>
+</section>
+
+<!-- CONTENT -->
+<section class="section fade">
+  <h2>Learning Path</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Basic Lessons</h3>
+      <p>Pondasi crypto untuk pemula. Konsep dasar tanpa ribet.</p>
+    </div>
+
+    <div class="card">
+      <h3>Intermediate Lessons</h3>
+      <p>Masuk ke level menengah: tokenomics, layer, dan use case.</p>
+    </div>
+
+    <div class="card">
+      <h3>Advance Lessons</h3>
+      <p>Analisa mendalam, risk management, dan mindset investor.</p>
+    </div>
+
+    <div class="card">
+      <h3>Market Outlook</h3>
+      <p>Analisa kondisi market dan sentimen crypto terkini.</p>
+    </div>
+
+    <div class="card">
+      <h3>Daily Trade</h3>
+      <p>Pembahasan market harian dan manajemen risiko.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DISCORD -->
+<section class="discord fade">
+  <h2>Join Our Discord</h2>
+  <p>
+    Semua pembelajaran, diskusi, dan update tersedia di Discord CryptoNext.
+  </p>
+
+  <a href="PASTE_LINK_DISCORD_KAMU" class="discord-btn" target="_blank">
+    <img src="assets/discord.png">
+    Join Discord
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© CryptoNext</p>
+</footer>
+
+<script>
+  const fades = document.querySelectorAll('.fade');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  });
+  fades.forEach(fade => observer.observe(fade));
+</script>
+
+</body>
+</html>
