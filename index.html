@@ -25,6 +25,46 @@
   revealOnScroll();
 </script>
 <body>
+
+  <!-- HERO / DESKRIPSI -->
+  <section class="hero reveal">
+    <h1>CryptoNext</h1>
+    <p>Platform edukasi crypto & market insight.</p>
+  </section>
+
+  <!-- LESSONS -->
+  <section class="lessons">
+    <h2 class="reveal">Learning Categories</h2>
+
+    <div class="cards">
+      <div class="card reveal delay-1">Basic Lessons</div>
+      <div class="card reveal delay-2">Intermediate Lessons</div>
+      <div class="card reveal delay-3">Advance Lessons</div>
+      <div class="card reveal delay-4">Market Outlook</div>
+    </div>
+  </section>
+
+  <!-- SCRIPT SCROLL -->
+  <script>
+    const reveals = document.querySelectorAll(".reveal");
+
+    function revealOnScroll() {
+      reveals.forEach(el => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        const revealPoint = 100;
+
+        if (elementTop < windowHeight - revealPoint) {
+          el.classList.add("active");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll();
+  </script>
+
+</body>
 <div class="card reveal delay-1">Basic Lessons</div>
 <div class="card reveal delay-2">Intermediate Lessons</div>
 <div class="card reveal delay-3">Advance Lessons</div>
@@ -109,6 +149,47 @@
   });
   fades.forEach(fade => observer.observe(fade));
 </script>
+
+</body>
+<body>
+
+  <!-- HERO / DESKRIPSI -->
+  <section class="hero reveal">
+    <h1>CryptoNext</h1>
+    <p>Platform edukasi crypto & market insight.</p>
+  </section>
+
+  <!-- LESSONS -->
+  <section class="lessons">
+    <h2 class="reveal">Learning Categories</h2>
+
+    <div class="cards">
+      <div class="card reveal delay-1">Basic Lessons</div>
+      <div class="card reveal delay-2">Intermediate Lessons</div>
+      <div class="card reveal delay-3">Advance Lessons</div>
+      <div class="card reveal delay-4">Market Outlook</div>
+    </div>
+  </section>
+
+  <!-- SCRIPT SCROLL -->
+  <script>
+    const reveals = document.querySelectorAll(".reveal");
+
+    function revealOnScroll() {
+      reveals.forEach(el => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        const revealPoint = 100;
+
+        if (elementTop < windowHeight - revealPoint) {
+          el.classList.add("active");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll();
+  </script>
 
 </body>
 </html>
