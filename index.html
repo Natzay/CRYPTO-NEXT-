@@ -1,50 +1,102 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>CryptoNext</title>
+  <title>CRYPTONEXT</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/style.css">
+  <meta name="description" content="CryptoNext adalah platform edukasi crypto, market outlook, dan trading insight.">
+
+  <link rel="stylesheet" href="style.css">
 </head>
-<script>
-  const reveals = document.querySelectorAll(".reveal");
-
-  function revealOnScroll() {
-    reveals.forEach(el => {
-      const windowHeight = window.innerHeight;
-      const elementTop = el.getBoundingClientRect().top;
-      const revealPoint = 100;
-
-      if (elementTop < windowHeight - revealPoint) {
-        el.classList.add("active");
-      }
-    });
-  }
-
-  window.addEventListener("scroll", revealOnScroll);
-  revealOnScroll();
-</script>
 <body>
 
-  <!-- HERO / DESKRIPSI -->
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="brand">
+      <!-- kalau belum ada logo, biarkan teks -->
+      <!-- <img src="logo.png" alt="CryptoNext Logo"> -->
+      <span>CRYPTONEXT</span>
+    </div>
+
+    <a href="https://discord.gg/5VNn7rZcHD"
+       class="discord-btn"
+       target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg">
+      Join Discord
+    </a>
+  </header>
+
+  <!-- HERO -->
   <section class="hero reveal">
     <h1>CryptoNext</h1>
-    <p>Platform edukasi crypto & market insight.</p>
+    <p>
+      CryptoNext adalah platform edukasi crypto, market outlook,
+      dan trading insight berbasis komunitas.
+    </p>
   </section>
 
   <!-- LESSONS -->
-  <section class="lessons">
-    <h2 class="reveal">Learning Categories</h2>
+  <section class="section">
+    <h2 class="reveal">Education Path</h2>
 
     <div class="cards">
-      <div class="card reveal delay-1">Basic Lessons</div>
-      <div class="card reveal delay-2">Intermediate Lessons</div>
-      <div class="card reveal delay-3">Advance Lessons</div>
-      <div class="card reveal delay-4">Market Outlook</div>
+      <a href="https://discord.gg/5VNn7rZcHD"
+         class="card reveal delay-1"
+         target="_blank">
+        <h3>Basic Lessons</h3>
+        <p>Fundamental crypto untuk pemula.</p>
+      </a>
+
+      <a href="https://discord.gg/5VNn7rZcHD"
+         class="card reveal delay-2"
+         target="_blank">
+        <h3>Intermediate Lessons</h3>
+        <p>Market structure & analisa menengah.</p>
+      </a>
+
+      <a href="https://discord.gg/5VNn7rZcHD"
+         class="card reveal delay-3"
+         target="_blank">
+        <h3>Advance Lessons</h3>
+        <p>Strategi lanjutan & mindset trader.</p>
+      </a>
     </div>
   </section>
 
-  <!-- SCRIPT SCROLL -->
+  <!-- TRADING -->
+  <section class="section">
+    <h2 class="reveal">Trading & Market</h2>
+
+    <div class="cards">
+      <div class="card reveal delay-1">
+        <h3>Daily Trade</h3>
+        <p>Setup harian & market execution.</p>
+      </div>
+
+      <div class="card reveal delay-2">
+        <h3>Market Outlook</h3>
+        <p>Analisa arah market & makro crypto.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta reveal">
+    <h2>Join CryptoNext Community</h2>
+    <a href="https://discord.gg/5VNn7rZcHD"
+       class="discord-btn big"
+       target="_blank">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg">
+      Join Discord
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 CryptoNext. All rights reserved.
+  </footer>
+
+  <!-- SCROLL REVEAL SCRIPT -->
   <script>
     const reveals = document.querySelectorAll(".reveal");
 
@@ -52,136 +104,7 @@
       reveals.forEach(el => {
         const windowHeight = window.innerHeight;
         const elementTop = el.getBoundingClientRect().top;
-        const revealPoint = 100;
-
-        if (elementTop < windowHeight - revealPoint) {
-          el.classList.add("active");
-        }
-      });
-    }
-
-    window.addEventListener("scroll", revealOnScroll);
-    revealOnScroll();
-  </script>
-
-</body>
-<div class="card reveal delay-1">Basic Lessons</div>
-<div class="card reveal delay-2">Intermediate Lessons</div>
-<div class="card reveal delay-3">Advance Lessons</div>
-<div class="card reveal delay-4">Market Outlook</div>
-
-<!-- NAVBAR -->
-<header class="navbar">
-  <div class="brand">
-    <img src="assets/logo.png" class="logo">
-    <span>CryptoNext</span>
-  </div>
-</header>
-
-<!-- HERO -->
-<section class="reveal">
-  <h1>CryptoNext</h1>
-  <p>
-    Platform pembelajaran crypto dari basic hingga advance.  
-    Belajar, pahami market, dan tingkatkan skill bersama komunitas.
-  </p>
-</section>
-
-<!-- CONTENT -->
-<section class="section fade">
-  <h2>Learning Path</h2>
-
-  <div class="cards">
-    <div class="card">
-      <h3>Basic Lessons</h3>
-      <p>Pondasi crypto untuk pemula. Konsep dasar tanpa ribet.</p>
-    </div>
-
-    <div class="card">
-      <h3>Intermediate Lessons</h3>
-      <p>Masuk ke level menengah: tokenomics, layer, dan use case.</p>
-    </div>
-
-    <div class="card">
-      <h3>Advance Lessons</h3>
-      <p>Analisa mendalam, risk management, dan mindset investor.</p>
-    </div>
-
-    <div class="card">
-      <h3>Market Outlook</h3>
-      <p>Analisa kondisi market dan sentimen crypto terkini.</p>
-    </div>
-
-    <div class="card">
-      <h3>Daily Trade</h3>
-      <p>Pembahasan market harian dan manajemen risiko.</p>
-    </div>
-  </div>
-</section>
-
-<!-- DISCORD -->
-<section class="discord fade">
-  <h2>Join Our Discord</h2>
-  <p>
-    Semua pembelajaran, diskusi, dan update tersedia di Discord CryptoNext.
-  </p>
-
-  <a href="https://discord.gg/5VNn7rZcHD"
-  class="discord-btn" target="_blank">
-    <img src="assets/discord.png">
-    Join Discord
-  </a>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <p>© CryptoNext</p>
-</footer>
-
-<script>
-  const fades = document.querySelectorAll('.fade');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-      }
-    });
-  });
-  fades.forEach(fade => observer.observe(fade));
-</script>
-
-</body>
-<body>
-
-  <!-- HERO / DESKRIPSI -->
-  <section class="hero reveal">
-    <h1>CryptoNext</h1>
-    <p>Platform edukasi crypto & market insight.</p>
-  </section>
-
-  <!-- LESSONS -->
-  <section class="lessons">
-    <h2 class="reveal">Learning Categories</h2>
-
-    <div class="cards">
-      <div class="card reveal delay-1">Basic Lessons</div>
-      <div class="card reveal delay-2">Intermediate Lessons</div>
-      <div class="card reveal delay-3">Advance Lessons</div>
-      <div class="card reveal delay-4">Market Outlook</div>
-    </div>
-  </section>
-
-  <!-- SCRIPT SCROLL -->
-  <script>
-    const reveals = document.querySelectorAll(".reveal");
-
-    function revealOnScroll() {
-      reveals.forEach(el => {
-        const windowHeight = window.innerHeight;
-        const elementTop = el.getBoundingClientRect().top;
-        const revealPoint = 100;
-
-        if (elementTop < windowHeight - revealPoint) {
+        if (elementTop < windowHeight - 100) {
           el.classList.add("active");
         }
       });
