@@ -1,119 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-<link rel="stylesheet" href="style.css">
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CRYPTONEXT</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="CryptoNext adalah platform edukasi crypto, market outlook, dan trading insight.">
 
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="brand">
-      <!-- kalau belum ada logo, biarkan teks -->
-      <!-- <img src="logo.png" alt="CryptoNext Logo"> -->
-      <span>CRYPTONEXT</span>
-    </div>
-
-    <a href="https://discord.gg/5VNn7rZcHD"
-       class="discord-btn"
-       target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg">
-      Join Discord
-    </a>
-  </header>
-
-  <!-- HERO -->
-  <section class="hero reveal">
-    <h1>CryptoNext</h1>
-    <p>
-      CryptoNext adalah platform edukasi crypto, market outlook,
-      dan trading insight berbasis komunitas.
-    </p>
-  </section>
-
-  <!-- LESSONS -->
-  <section class="section">
-    <h2 class="reveal">Education Path</h2>
-
-    <div class="cards">
-      <a href="https://discord.gg/5VNn7rZcHD"
-         class="card reveal delay-1"
-         target="_blank">
-        <h3>Basic Lessons</h3>
-        <p>Fundamental crypto untuk pemula.</p>
-      </a>
-
-      <a href="https://discord.gg/5VNn7rZcHD"
-         class="card reveal delay-2"
-         target="_blank">
-        <h3>Intermediate Lessons</h3>
-        <p>Market structure & analisa menengah.</p>
-      </a>
-
-      <a href="https://discord.gg/5VNn7rZcHD"
-         class="card reveal delay-3"
-         target="_blank">
-        <h3>Advance Lessons</h3>
-        <p>Strategi lanjutan & mindset trader.</p>
-      </a>
-    </div>
-  </section>
-
-  <!-- TRADING -->
-  <section class="section">
-    <h2 class="reveal">Trading & Market</h2>
-
-    <div class="cards">
-      <div class="card reveal delay-1">
-        <h3>Daily Trade</h3>
-        <p>Setup harian & market execution.</p>
-      </div>
-
-      <div class="card reveal delay-2">
-        <h3>Market Outlook</h3>
-        <p>Analisa arah market & makro crypto.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta reveal">
-    <h2>Join CryptoNext Community</h2>
-    <a href="https://discord.gg/5VNn7rZcHD"
-       class="discord-btn big"
-       target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg">
-      Join Discord
-    </a>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    © 2025 CryptoNext. All rights reserved.
-  </footer>
-
-  <!-- SCROLL REVEAL SCRIPT -->
-  <script>
-    const reveals = document.querySelectorAll(".reveal");
-
-    function revealOnScroll() {
-      reveals.forEach(el => {
-        const windowHeight = window.innerHeight;
-        const elementTop = el.getBoundingClientRect().top;
-        if (elementTop < windowHeight - 100) {
-          el.classList.add("active");
-        }
-      });
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
-    window.addEventListener("scroll", revealOnScroll);
-    revealOnScroll();
-  </script>
+    body {
+      background: radial-gradient(circle at top, #111 0%, #000 70%);
+      color: #fff;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 24px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      color: #aaa;
+      max-width: 600px;
+      margin: 0 auto 30px;
+      line-height: 1.6;
+    }
+
+    .discord-btn {
+      display: inline-block;
+      padding: 14px 28px;
+      color: #000;
+      background: #00ffd5;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+      box-shadow: 0 0 20px rgba(0,255,213,0.6);
+    }
+
+    .discord-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 35px rgba(0,255,213,1);
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 28px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 30px;
+      border-radius: 16px;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.4s;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    .card:hover {
+      border-color: #00ffd5;
+      box-shadow: 0 0 30px rgba(0,255,213,0.8);
+      transform: translateY(-6px) scale(1.02);
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      color: #00ffd5;
+    }
+
+    .card p {
+      color: #ccc;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .show {
+      opacity: 1;
+      transform: translateY(0);
+      transition: 0.8s ease;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #555;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>CRYPTONEXT</header>
+
+<section class="hero">
+  <h1>Belajar Crypto dengan Alur yang Benar</h1>
+  <p>
+    CryptoNext adalah platform edukasi crypto, market outlook,
+    dan trading insight berbasis komunitas Discord.
+  </p>
+  <a href="https://discord.gg/ISI_LINK_DISCORD_KAMU" class="discord-btn">
+    Join Discord
+  </a>
+</section>
+
+<section class="section">
+  <h2>Education Path</h2>
+  <div class="cards">
+    <div class="card reveal">
+      <h3>Basic Lessons</h3>
+      <p>Fundamental crypto, blockchain, wallet, dan keamanan.</p>
+    </div>
+
+    <div class="card reveal">
+      <h3>Intermediate Lessons</h3>
+      <p>Tokenomics, market cycle, dan analisa menengah.</p>
+    </div>
+
+    <div class="card reveal">
+      <h3>Advance Lessons</h3>
+      <p>On-chain data, market psychology, dan risk management.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Trading & Market</h2>
+  <div class="cards">
+    <div class="card reveal">
+      <h3>Daily Trade</h3>
+      <p>Setup harian, bias market, dan manajemen posisi.</p>
+    </div>
+
+    <div class="card reveal">
+      <h3>Market Outlook</h3>
+      <p>Macro crypto, BTC dominance, dan arah market.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2025 CryptoNext
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll(".reveal");
+
+  function revealOnScroll() {
+    reveals.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      const visible = window.innerHeight - 80;
+      if (top < visible) {
+        el.classList.add("show");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll();
+</script>
 
 </body>
 </html>
